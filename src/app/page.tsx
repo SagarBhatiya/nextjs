@@ -1,14 +1,16 @@
-import Link from 'next/link'
-import React from 'react'
-
+import React from "react";
+import { Bebas_Neue } from "next/font/google";
+const bebasFont = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+});
 const Home = () => {
-
   return (
     <div>
       <h1>Home</h1>
-      <Link href="/user">click</Link>
+      <p className={`${bebasFont.className}`}>Random shit</p>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
